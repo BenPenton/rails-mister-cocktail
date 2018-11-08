@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="banner" style='background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.4) 50%), url("https://loremflickr.com/1000/1000/<%= @cocktail.name %>");'>
+  <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+  </div>
+  <h2>Ingredients</h2>
+  <div class="dose_container">
+    <% @cocktail.doses.each do |dose| %>
+      <div class="dose_card">
+        <h4><%= dose.ingredient.name %></h4>
+        <h4><%= dose.description %></h4>
+        <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete, class:"btn btn-danger" %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "Add a New Ingredient", new_cocktail_dose_path(@cocktail), class:"btn btn-primary" %>
+  <br>
+  <%= link_to "Back to Cocktails", cocktails_path, class: "btn btn-primary" %>
+
+</div>

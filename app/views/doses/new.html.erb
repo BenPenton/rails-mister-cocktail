@@ -1,0 +1,19 @@
+<div class="container form-wrapper">
+  <%= simple_form_for([@cocktail, @dose])do |f| %>
+    <% if @cocktail.errors.any? %>
+      <div class="errors-container">
+        <ul>
+          <% @cocktail.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.association :ingredient %>
+      <%= f.text_field :description, class: "form-control" %>
+    </div>
+    <%= f.submit "Submit", :class => "btn btn-primary" %>
+
+  <% end %>
+</div>
