@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="card col-xs-6" style='background-image: url("https://loremflickr.com/500/500/<%= cocktail.name %>")' >
+      <div class="card col-xs-6" style='background-image: url(<%= cl_image_path("samples/ecommerce/leather-bag-gray.jpg") %>)' >
+
         <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-white"  %> </h2>
       </div>
     <% end %>
