@@ -9,5 +9,5 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
-Cocktail.create(name: "G & T")
+Cocktail.create(name: "Gin and Tonic")
 Cocktail.create(name: "Mojito")
