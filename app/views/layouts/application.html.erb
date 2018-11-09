@@ -12,7 +12,13 @@
   </head>
 
   <body>
-    <div class="navbar-wagon"></div>
+    <div class="navbar-wagon">
+      <div class="logo">
+        <%= link_to cocktails_path do %>
+          <%= cl_image_tag "cocktail-flat-icon-single-high-260nw-517099624", height: 50, width: 50, crop: :fill %>
+        <% end %>
+      </div>
+    </div>
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <%= javascript_pack_tag "application" %>
