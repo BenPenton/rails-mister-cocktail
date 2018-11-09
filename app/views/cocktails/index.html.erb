@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-right">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do%>
-        <div class="card col-xs-6" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path("#{cocktail.photo}") %>)' >
+        <div class="card col-xs-12 col-md-4" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path("#{cocktail.photo}") %>)' >
 
           <h2><%= cocktail.name %> </h2>
         </div>
